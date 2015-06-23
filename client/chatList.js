@@ -1,5 +1,9 @@
 Template.chatList.helpers({
-    sampleChat: function() {
-        return "Hi!";
+    sampleChats: function() {
+        return [
+            {text: "Hi!"},
+            {text: "How are you?"},
+            {text: "'sup!"}
+        ];
     }
 });

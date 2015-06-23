@@ -1,5 +1,9 @@
 <template name="chatList">
     <h1>This is a list of chats!</h1>
 
-    {{sampleChat}}
+    <ul>
+        {{#each sampleChats}}
+            <li>{{text}}</li>
+        {{/each}}
+    </ul>
 </template>
