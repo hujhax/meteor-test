@@ -3,3 +3,9 @@ Template.chatList.helpers({
         return Chats.find();
     }
 });
+
+Template.chatList.events({
+    'click button': function() {
+        Meteor.call("addChat", $('input').val());
+    }
+});
