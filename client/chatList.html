@@ -1,13 +1,17 @@
 <template name="chatList">
-    <h1>This is a list of chats!</h1>
+    {{#if currentUser}}
+        <h1>This is a list of chats!</h1>
 
-    <div>Enter your message:</div>
-    <input class="text-entry">
-    <button class="chat-button">Send</button>
+        <div>Enter your message:</div>
+        <input class="text-entry">
+        <button class="chat-button">Send</button>
 
-    <ul>
-        {{#each sampleChats}}
-            <li>{{text}}</li>
-        {{/each}}
-    </ul>
+        <ul>
+            {{#each sampleChats}}
+                <li>{{text}}</li>
+            {{/each}}
+        </ul>
+    {{else}}
+        <h1>Please log in!</h1>
+    {{/if}}
 </template>
